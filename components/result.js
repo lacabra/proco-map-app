@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -12,6 +12,20 @@ export default function Result(props) {
 			msg = '🏆 You are a mapping champion! 🗺';
 			break;
 	}
+
+	const [score, updateScore] = useState(props.userStats.total - 10);
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			updateScore(oldValue => {
+				if (oldValue < props.userStats.total) {
+					const newValue = oldValue + 1;
+					return newValue;
+				}
+				return oldValue;
+			});
+		}, 50);
+	}, []);
 
 	return(
 	  	<Layout className="result">
@@ -29,6 +43,7 @@ export default function Result(props) {
 
 			<div className="result big-button">
 				<h1>Thank you for contributing to Project Connect! You have helped us connect {props.userStats.total} schools to the internet!</h1>
+				<h1>{score}</h1>
 				<p style={{paddingTop: '.5em'}}>
 					{props.taggedAllLocations ? '🏆 You are a mapping champion! 🗺 You have mapped all of our potential school locations. We will add more shortly, so come back soon.' : ''}
 				</p>
