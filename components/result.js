@@ -6,27 +6,6 @@ import Layout from '../components/layout';
 import Button from 'react-bootstrap/Button';
 
 export default function Result(props) {
-	let msg = '';
-	switch(props.correctAnswers){
-		case 5:
-			msg = '🏆 You are a mapping champion! 🗺';
-			break;
-	}
-
-	const [score, updateScore] = useState(props.userStats.total - 10);
-
-	useEffect(() => {
-		const interval = setInterval(() => {
-			updateScore(oldValue => {
-				if (oldValue < props.userStats.total) {
-					const newValue = oldValue + 1;
-					return newValue;
-				}
-				return oldValue;
-			});
-		}, 50);
-	}, []);
-
 	return(
 	  	<Layout className="result">
 			<Head>
@@ -64,5 +43,4 @@ export default function Result(props) {
 }
 
 Result.propTypes = {
-  correctAnswers: PropTypes.number.isRequired
 };
