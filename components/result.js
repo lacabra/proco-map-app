@@ -46,7 +46,7 @@ export default function Result(props) {
 					<div className="outerMessage">
 						<img src='Congratulations.svg' alt='Congratulations' />
 						<h2>Congratulations!</h2>
-						<p>You just mapped {props.gameStats.mapped_count} schools</p>
+						<p>You just mapped {props.gameStats.mapped_count} locations</p>
 					</div>
 					<div className="innerMessage">
 						<p className="fact" style={{paddingTop: '.5em'}}>
