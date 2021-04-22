@@ -104,9 +104,9 @@ const ProgressBar = props => {
 	return (
 		<Container value={value} answer={answer} width={width} chosen={chosen} label={label} >
 			<div className={chosen == true ? `grid-container bar-chosen ${answer}` : 'grid-container bar-unchosen'}>
-				<span id='label'>{label}&nbsp;</span>
+				<span id='label'>{label}&nbsp;&nbsp;</span>
 				<div><progress id='progress-bar' label={label} value={value} max={max} /></div>
-				<span id='percentage'>&nbsp;{((value / max) * 100).toFixed(2)}%</span>
+				<span id='percentage'>&nbsp;&nbsp;{((value / max) * 100).toFixed(2)}%</span>
 			</div>
 		</Container>);
 }
