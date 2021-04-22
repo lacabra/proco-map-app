@@ -102,6 +102,7 @@ export default function Quiz (props) {
 							chosen={result.answer == 'maybe'} 
 							answer={result.answer}
 							value={((props.locationResults.maybe_count + (result.answer == 'maybe' ? 1 : 0)) / (props.locationResults.total_count + 1)) * 100} />
+						<br/>
 					</div>
 					:
 					''
