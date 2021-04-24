@@ -269,7 +269,7 @@ main {
 
 .mapdiv {
   width: 100%;
-  height: calc(100% - 8em);
+  height: calc(100% - 8.5em);
   position: relative;
 }
 
@@ -335,7 +335,8 @@ a {
  */
 
 .actionButton {
-  border-radius: 15px;
+  border-radius: 18.5px;
+  line-height: 2;
 }
 
 .actionButton.yes {
