@@ -111,7 +111,7 @@ const UserView = ({ user, signout }) => {
 
             <div className="profile-bottom">
                 {userStats.mapped_count > 0
-                    ? <div>
+                    ? <div className="mappings-div">
                         <div className="mappings-container">
                             <div className="mappings-header">
                                 <img src="/star-white.svg" />
