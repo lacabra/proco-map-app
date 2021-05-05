@@ -181,9 +181,6 @@ footer {
   width: 100%;
   color: white;
   font-size: 0.8em;
-  position: fixed;
-  bottom: 0px;
-  max-width: 512px;
 }
 
 footer a {
