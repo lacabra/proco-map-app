@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, {useState} from "react";
 
 export default function footerComponent(props) {
   const [footerClass, setFooterClass] = useState("masthead pt-3 mt-3");
@@ -8,8 +8,7 @@ export default function footerComponent(props) {
   }, []);
 
   function setTopMargin() {
-    if(props.noTopMargin)
-      setFooterClass("masthead pt-3");   
+    if (props.noTopMargin) setFooterClass("masthead pt-3");
   }
 
   return (
