@@ -1,14 +1,14 @@
 import React, {useState} from "react";
 
 export default function footerComponent(props) {
-  const [footerClass, setFooterClass] = useState('masthead pt-3 mt-3');
+  const [footerClass, setFooterClass] = useState("masthead pt-3 mt-3");
 
   React.useEffect(() => {
     setTopMargin();
   }, []);
 
   function setTopMargin() {
-    if (props.noTopMargin) setFooterClass('masthead pt-3');
+    if (props.noTopMargin) setFooterClass("masthead pt-3");
   }
 
   return (
