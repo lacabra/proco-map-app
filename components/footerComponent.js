@@ -1,8 +1,7 @@
 import React, {useState} from "react";
-import Head from "next/head";
 
 export default function footerComponent(props) {
-  const [footerClass, setFooterClass] = useState("masthead pt-3 mt-3");
+  const [footerClass, setFooterClass] = useState('masthead pt-3 mt-3');
 
   React.useEffect(() => {
     setTopMargin();
