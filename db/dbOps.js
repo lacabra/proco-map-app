@@ -51,6 +51,7 @@ async function createTables() {
 			user_id TEXT,
 			school_id TEXT,
 			result yesnomaybe,
+			created_at DATE,
 			unique (user_id, school_id)
 		);
 	`);
