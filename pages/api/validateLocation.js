@@ -18,8 +18,8 @@ export default async (req, res) => {
     ) {
       // only then store this data into the database
       pool.query(
-        "INSERT INTO crowdsourcing(user_id, school_id, result) VALUES($1, $2, $3) RETURNING *",
-        [req.body.user_id, req.body.school_id, req.body.result],
+        "INSERT INTO crowdsourcing(user_id, school_id, result, created_at) VALUES($1, $2, $3, $4) RETURNING *",
+        [req.body.user_id, req.body.school_id, req.body.result, new Date()],
         (err, res) => {
           console.log(err ? err.stack : res.rows[0]);
         }
