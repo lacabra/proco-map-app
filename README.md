@@ -124,6 +124,8 @@ This application expects a CSV file containing the following data about each sch
 - id
 - country
 
+where the `id` field must be unique, and the `country` must be specified with [ISO 3166-1 alpha country codes](data/countries.json).
+
 Name the file `schools.csv` and copy it into the `scripts/` folder. In that folder run:
 
 ```bash
