@@ -109,20 +109,20 @@ const UserView = ({user, signout}) => {
         {userStats.mapped_count > 0 ? (
           <div>
             <div className="mappings-container">
-              <div className="mappings-header">
+              <div className="mappings-header pt-1 pb-1">
                 <img src="/star-white.svg" />
                 <span className="mappings-title">Your mappings</span>
               </div>
               <div className="mappings-list">
-                <div className="profile-fact">
+                <div className="profile-fact p-3">
                   You have mapped {userStats.mapped_count} schools.
                 </div>
                 <hr className="profile-fact-divider" />
-                <div className="profile-fact">{facts.country_count}</div>
+                <div className="profile-fact p-3">{facts.country_count}</div>
                 <hr className="profile-fact-divider" />
-                <div className="profile-fact">{facts.top_country}</div>
+                <div className="profile-fact p-3">{facts.top_country}</div>
                 <hr className="profile-fact-divider" />
-                <div className="profile-fact">{facts.num_locations_mapped_total}</div>
+                <div className="profile-fact p-3">{facts.num_locations_mapped_total}</div>
               </div>
             </div>
             <div className="bottom-button">
@@ -177,7 +177,7 @@ const ProfilePage = () => {
         <UserView user={session.user} signout={signOutWithRedirect} />
       )}
 
-      <FooterComponent />
+      <FooterComponent noTopMargin={true} />
     </Layout>
   );
 };

@@ -1,6 +1,18 @@
-export default function footerComponent() {
+import React, {useState} from "react";
+
+export default function footerComponent(props) {
+  const [footerClass, setFooterClass] = useState("masthead pt-3 mt-3");
+
+  React.useEffect(() => {
+    setTopMargin();
+  }, []);
+
+  function setTopMargin() {
+    if (props.noTopMargin) setFooterClass("masthead pt-3");
+  }
+
   return (
-    <footer className="masthead pt-3 mt-3">
+    <footer className={footerClass}>
       <p style={{textAlign: "center"}}>
         <a href="/legal#terms-of-use">Terms of Use</a>
         &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
