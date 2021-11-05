@@ -107,7 +107,7 @@ const UserView = ({user, signout}) => {
 
       <div className="profile-bottom">
         {userStats.mapped_count > 0 ? (
-          <div>
+          <>
             <div className="mappings-container">
               <div className="mappings-header">
                 <img src="/star-white.svg" />
@@ -122,7 +122,9 @@ const UserView = ({user, signout}) => {
                 <hr className="profile-fact-divider" />
                 <div className="profile-fact">{facts.top_country}</div>
                 <hr className="profile-fact-divider" />
-                <div className="profile-fact">{facts.num_locations_mapped_total}</div>
+                <div className="profile-fact extra-padding">
+                  {facts.num_locations_mapped_total}
+                </div>
               </div>
             </div>
             <div className="bottom-button">
@@ -133,7 +135,7 @@ const UserView = ({user, signout}) => {
                 </Button>
               </Link>
             </div>
-          </div>
+          </>
         ) : (
           <div>
             <div className="bottom-button">
